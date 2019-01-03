@@ -14,13 +14,13 @@ makeCacheMatrix <- function(x = matrix()) {
   getsolve <- function() m
   list(set = set,          # gives the name 'set' to the set() function defined above
        get = get,          # gives the name 'get' to the get() function defined above
-       setsolve = setsolve,  # gives the name 'setmean' to the setmean() function defined above
-       getsolve = getsolve)  # gives the name 'getmean' to the getmean() function defined above
-  #example: aMatrix <- makeMatrix(1:10)
+       setsolve = setsolve,  # gives the name 'setsolve' to the setsolve() function defined above
+       getsolve = getsolve)  # gives the name 'getsolve' to the getsolve() function defined above
+  #example: aMatrix <- makeCacheMatrix(stats::rnorm(16))
   #aMatrix$get()                retrieve the value of x
   #aMatrix$getsolve()           retrieve the value of m, which should be NULL
   
-  #cacheinverse(aMatrix)           notice mean calculated is mean of 30:50, not 1:10
+  #cacheinverse(aMatrix)           
   #aMatrix$getsolve()            retrieve it directly, now that it has been cached
 
 }
